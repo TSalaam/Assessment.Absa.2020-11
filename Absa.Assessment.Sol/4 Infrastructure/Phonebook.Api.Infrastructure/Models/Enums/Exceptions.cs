@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Phonebook.Api.Infrastructure.Models.Enums {
+namespace PhoneBook.Api.Infrastructure.Models.Enums {
 
     /// <summary>  
     /// Different types of exceptions.  

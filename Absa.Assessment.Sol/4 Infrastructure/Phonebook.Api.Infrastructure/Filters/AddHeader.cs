@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace Phonebook.Api.Infrastructure.Filters {
+namespace PhoneBook.Api.Infrastructure.Filters {
 
     /// <summary>
     /// Adds a header to the response

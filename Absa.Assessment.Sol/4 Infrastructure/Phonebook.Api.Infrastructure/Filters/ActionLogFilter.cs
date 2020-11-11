@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;
 
-namespace Phonebook.Api.Infrastructure.Filters {
+namespace PhoneBook.Api.Infrastructure.Filters {
 
     public class ActionLogFilter : IActionFilter {
 

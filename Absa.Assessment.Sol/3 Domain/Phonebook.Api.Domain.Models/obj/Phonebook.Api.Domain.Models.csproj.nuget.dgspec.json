@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain.Models\\Phonebook.Api.Domain.Models.csproj": {}
+    "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain.Models\\PhoneBook.Api.Domain.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain.Models\\Phonebook.Api.Domain.Models.csproj": {
+    "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain.Models\\PhoneBook.Api.Domain.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain.Models\\Phonebook.Api.Domain.Models.csproj",
-        "projectName": "Phonebook.Api.Domain.Models",
-        "projectPath": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain.Models\\Phonebook.Api.Domain.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain.Models\\PhoneBook.Api.Domain.Models.csproj",
+        "projectName": "PhoneBook.Api.Domain.Models",
+        "projectPath": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain.Models\\PhoneBook.Api.Domain.Models.csproj",
         "packagesPath": "C:\\Users\\Thaabiet.Salaam\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain.Models\\obj\\",
         "projectStyle": "PackageReference",

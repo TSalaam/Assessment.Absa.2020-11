@@ -4,7 +4,7 @@ using System.Text;
 
 using Newtonsoft.Json;
 
-namespace Phonebook.Api.Infrastructure.Models {
+namespace PhoneBook.Api.Infrastructure.Models {
 
     public class ValidationError {
 

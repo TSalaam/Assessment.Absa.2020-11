@@ -12,11 +12,11 @@ using Microsoft.AspNetCore.Mvc.Filters;
 
 using Microsoft.Extensions.Logging;
 
-using Phonebook.Api.Infrastructure.ActionResults;
-using Phonebook.Api.Infrastructure.Exceptions;
-using Phonebook.Api.Infrastructure.Extensions;
+using PhoneBook.Api.Infrastructure.ActionResults;
+using PhoneBook.Api.Infrastructure.Exceptions;
+using PhoneBook.Api.Infrastructure.Extensions;
 
-namespace Phonebook.Api.Infrastructure.Filters {
+namespace PhoneBook.Api.Infrastructure.Filters {
 
     public class HttpGlobalExceptionFilter : IExceptionFilter {
 

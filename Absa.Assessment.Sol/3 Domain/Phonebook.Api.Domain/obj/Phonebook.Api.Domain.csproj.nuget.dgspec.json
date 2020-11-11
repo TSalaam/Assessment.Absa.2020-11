@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain\\Phonebook.Api.Domain.csproj": {}
+    "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain\\PhoneBook.Api.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain\\Phonebook.Api.Domain.csproj": {
+    "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain\\PhoneBook.Api.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain\\Phonebook.Api.Domain.csproj",
-        "projectName": "Phonebook.Api.Domain",
-        "projectPath": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain\\Phonebook.Api.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain\\PhoneBook.Api.Domain.csproj",
+        "projectName": "PhoneBook.Api.Domain",
+        "projectPath": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain\\PhoneBook.Api.Domain.csproj",
         "packagesPath": "C:\\Users\\Thaabiet.Salaam\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain\\obj\\",
         "projectStyle": "PackageReference",

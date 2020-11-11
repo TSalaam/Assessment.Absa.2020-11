@@ -8,7 +8,7 @@ using FluentValidation.Results;
 
 using DataAnnotations = System.ComponentModel.DataAnnotations;
 
-namespace Phonebook.Api.Infrastructure.Models {
+namespace PhoneBook.Api.Infrastructure.Models {
 
     public class ValidationResultModel {
 

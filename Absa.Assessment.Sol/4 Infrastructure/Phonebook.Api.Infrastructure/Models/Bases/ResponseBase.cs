@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 using Newtonsoft.Json;
 
-namespace Phonebook.Api.Infrastructure.Models.Bases {
+namespace PhoneBook.Api.Infrastructure.Models.Bases {
 
     public abstract class ResponseBase {
 

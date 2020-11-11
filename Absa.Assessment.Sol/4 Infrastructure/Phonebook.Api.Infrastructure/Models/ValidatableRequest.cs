@@ -4,7 +4,7 @@ using System.Text;
 
 using FluentValidation.Results;
 
-namespace Phonebook.Api.Infrastructure.Models {
+namespace PhoneBook.Api.Infrastructure.Models {
 
     public class ValidatableRequest<T> {
         /// <summary>

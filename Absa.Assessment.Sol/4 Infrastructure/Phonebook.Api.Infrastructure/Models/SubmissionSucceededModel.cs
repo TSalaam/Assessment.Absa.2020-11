@@ -5,9 +5,9 @@ using System.Text;
 
 using Newtonsoft.Json;
 
-using Phonebook.Api.Infrastructure.Models.Bases;
+using PhoneBook.Api.Infrastructure.Models.Bases;
 
-namespace Phonebook.Api.Infrastructure.Models {
+namespace PhoneBook.Api.Infrastructure.Models {
 
     public class SubmissionSucceededModel : ResponseBase {
 

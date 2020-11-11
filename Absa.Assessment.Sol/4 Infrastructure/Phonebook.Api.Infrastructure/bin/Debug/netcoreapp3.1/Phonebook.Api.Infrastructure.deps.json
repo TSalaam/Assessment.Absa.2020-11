@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Phonebook.Api.Infrastructure/1.0.0": {
+      "PhoneBook.Api.Infrastructure/1.0.0": {
         "dependencies": {
           "FluentValidation": "9.3.0",
           "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
@@ -15,7 +15,7 @@
           "System.Data.SqlClient": "4.8.2"
         },
         "runtime": {
-          "Phonebook.Api.Infrastructure.dll": {}
+          "PhoneBook.Api.Infrastructure.dll": {}
         }
       },
       "FluentValidation/9.3.0": {
@@ -824,7 +824,7 @@
     }
   },
   "libraries": {
-    "Phonebook.Api.Infrastructure/1.0.0": {
+    "PhoneBook.Api.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

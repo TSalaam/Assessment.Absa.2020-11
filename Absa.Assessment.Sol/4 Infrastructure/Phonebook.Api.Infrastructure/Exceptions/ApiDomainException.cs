@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Phonebook.Api.Infrastructure.Exceptions {
+namespace PhoneBook.Api.Infrastructure.Exceptions {
 
     /// <summary>
     /// Exception type for application exceptions

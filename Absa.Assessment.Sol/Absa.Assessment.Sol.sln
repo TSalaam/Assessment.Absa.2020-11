@@ -15,15 +15,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook.Web", "1 UI\Phone
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook.Api", "2 Microservices\PhoneBook.Api\PhoneBook.Api.csproj", "{1E3B7083-DE65-4252-97EC-A826E60F915A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonebook.Api.Domain", "3 Domain\Phonebook.Api.Domain\Phonebook.Api.Domain.csproj", "{10870D91-CD32-4E37-AAA6-EBD83B1EB134}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook.Api.Domain", "3 Domain\Phonebook.Api.Domain\PhoneBook.Api.Domain.csproj", "{10870D91-CD32-4E37-AAA6-EBD83B1EB134}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonebook.Api.Domain.Models", "3 Domain\Phonebook.Api.Domain.Models\Phonebook.Api.Domain.Models.csproj", "{ACEA9464-851C-46EE-949F-283CD7984D8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook.Api.Domain.Models", "3 Domain\Phonebook.Api.Domain.Models\PhoneBook.Api.Domain.Models.csproj", "{ACEA9464-851C-46EE-949F-283CD7984D8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonebook.Api.Domain.Models.Request", "3 Domain\Phonebook.Api.Domain.Models.Request\Phonebook.Api.Domain.Models.Request.csproj", "{F79979A9-8DC7-42EC-96B7-0F6169E5D6EF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook.Api.Domain.Models.Request", "3 Domain\Phonebook.Api.Domain.Models.Request\PhoneBook.Api.Domain.Models.Request.csproj", "{F79979A9-8DC7-42EC-96B7-0F6169E5D6EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonebook.Api.Infrastructure", "4 Infrastructure\Phonebook.Api.Infrastructure\Phonebook.Api.Infrastructure.csproj", "{A9136DC5-DB6C-4B13-AE5F-7CEAB26398DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook.Api.Infrastructure", "4 Infrastructure\Phonebook.Api.Infrastructure\PhoneBook.Api.Infrastructure.csproj", "{A9136DC5-DB6C-4B13-AE5F-7CEAB26398DC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phonebook.Api.Domain.Models.Response", "3 Domain\Phonebook.Api.Domain.Models.Response\Phonebook.Api.Domain.Models.Response.csproj", "{1B753B51-08D1-4A00-9318-6D315D11589A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneBook.Api.Domain.Models.Response", "3 Domain\Phonebook.Api.Domain.Models.Response\PhoneBook.Api.Domain.Models.Response.csproj", "{1B753B51-08D1-4A00-9318-6D315D11589A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

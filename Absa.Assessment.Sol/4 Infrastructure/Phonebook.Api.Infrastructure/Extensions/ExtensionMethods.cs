@@ -5,9 +5,9 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
 
-using Models = Phonebook.Api.Infrastructure.Models;
+using Models = PhoneBook.Api.Infrastructure.Models;
 
-namespace Phonebook.Api.Infrastructure.Extensions {
+namespace PhoneBook.Api.Infrastructure.Extensions {
 
     public static class ExtensionMethods {
 

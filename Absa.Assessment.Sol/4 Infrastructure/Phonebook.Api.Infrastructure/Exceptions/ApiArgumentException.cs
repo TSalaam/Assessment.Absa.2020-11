@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Phonebook.Api.Infrastructure.Exceptions {
+namespace PhoneBook.Api.Infrastructure.Exceptions {
 
     public class ApiArgumentException : ArgumentException {
 

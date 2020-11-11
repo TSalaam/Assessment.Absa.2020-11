@@ -6,11 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 
 using FluentValidation.Results;
 
-using Phonebook.Api.Infrastructure.Models;
+using PhoneBook.Api.Infrastructure.Models;
 
 using DataAnnotations = System.ComponentModel.DataAnnotations;
 
-namespace Phonebook.Api.Infrastructure.Results {
+namespace PhoneBook.Api.Infrastructure.Results {
 
     public class ValidationFailedResult : ObjectResult {
 

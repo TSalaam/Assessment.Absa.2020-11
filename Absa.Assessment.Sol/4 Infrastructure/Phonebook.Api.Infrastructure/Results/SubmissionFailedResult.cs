@@ -5,10 +5,10 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-using Phonebook.Api.Infrastructure.Extensions;
-using Phonebook.Api.Infrastructure.Models;
+using PhoneBook.Api.Infrastructure.Extensions;
+using PhoneBook.Api.Infrastructure.Models;
 
-namespace Phonebook.Api.Infrastructure.Results {
+namespace PhoneBook.Api.Infrastructure.Results {
 
     public class SubmissionFailedResult : ObjectResult {
 
