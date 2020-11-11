@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Phonebook.Api.Domain.Models/1.0.0": {
+      "PhoneBook.Api.Domain.Models/1.0.0": {
         "runtime": {
-          "Phonebook.Api.Domain.Models.dll": {}
+          "PhoneBook.Api.Domain.Models.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Phonebook.Api.Domain.Models/1.0.0": {
+    "PhoneBook.Api.Domain.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

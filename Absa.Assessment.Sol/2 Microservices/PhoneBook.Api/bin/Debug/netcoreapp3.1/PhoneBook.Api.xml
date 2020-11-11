@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PhoneBook.Api</name>
+    </assembly>
+    <members>
+        <member name="T:PhoneBook.Api.Configuration.AppSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PhoneBook.Api.Controllers.PhoneBookController">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.Controller" />
+        </member>
+        <member name="M:PhoneBook.Api.Controllers.PhoneBookController.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger{PhoneBook.Api.Controllers.PhoneBookController},PhoneBook.Api.Services.Interfaces.IPhoneBookService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PhoneBook.Api.Controllers.PhoneBookController"/> class.
+            </summary>
+        </member>
+        <member name="M:PhoneBook.Api.Controllers.PhoneBookController.SaveEntry(PhoneBook.Api.Domain.Models.Request.EntryRequest)">
+            <summary>
+            Saves the entry.
+            </summary>
+            <param name="entry">The entry.</param>
+            <returns></returns>
+            <exception cref="T:PhoneBook.Api.Infrastructure.Exceptions.ApiArgumentException">Parameter cannot be null or empty - Name</exception>
+        </member>
+        <member name="M:PhoneBook.Api.Controllers.PhoneBookController.GetEntries(System.String)">
+            <summary>
+            Gets the entries for the specified user
+            </summary>
+            <param name="name">The name.</param>
+            <returns></returns>
+            <exception cref="T:PhoneBook.Api.Infrastructure.Exceptions.ApiArgumentException">Parameter cannot be null or empty - name</exception>
+        </member>
+        <member name="M:PhoneBook.Api.Controllers.PhoneBookController.SearchEntries(System.String)">
+            <summary>
+            Searches the entries.
+            </summary>
+            <param name="query">The query.</param>
+            <returns></returns>
+            <exception cref="T:PhoneBook.Api.Infrastructure.Exceptions.ApiArgumentException">Parameter cannot be null or empty - query</exception>
+        </member>
+        <member name="T:PhoneBook.Api.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PhoneBook.Api.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PhoneBook.Api.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PhoneBook.Api.Repositories.Helpers.SeedData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PhoneBook.Api.Repositories.Helpers.SeedData.Initialize(System.IServiceProvider)">
+            <summary>
+            Initializes the specified service provider.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="T:PhoneBook.Api.Repositories.Interfaces.IPhoneBookRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PhoneBook.Api.Repositories.Interfaces.IPhoneBookRepository.SaveEntry(PhoneBook.Api.Domain.Models.Request.EntryRequest)">
+            <summary>
+            Saves the entry.
+            </summary>
+            <param name="request">The request.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PhoneBook.Api.Repositories.Interfaces.IPhoneBookRepository.GetEntries(System.String)">
+            <summary>
+            Gets the entries.
+            </summary>
+            <param name="name">The name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PhoneBook.Api.Repositories.Interfaces.IPhoneBookRepository.SearchEntries(System.String)">
+            <summary>
+            Searches the entries.
+            </summary>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="T:PhoneBook.Api.Repositories.PhoneBookContext">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:Microsoft.EntityFrameworkCore.DbContext" />
+        </member>
+        <member name="M:PhoneBook.Api.Repositories.PhoneBookContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{PhoneBook.Api.Repositories.PhoneBookContext})">
+            <summary>
+            Initializes a new instance of the <see cref="T:PhoneBook.Api.Repositories.PhoneBookContext"/> class.
+            </summary>
+            <param name="options">The options.</param>
+        </member>
+        <member name="P:PhoneBook.Api.Repositories.PhoneBookContext.PhoneBooks">
+            <summary>
+            Gets or sets the phone books.
+            </summary>
+            <value>
+            The phone books.
+            </value>
+        </member>
+        <member name="P:PhoneBook.Api.Repositories.PhoneBookContext.Entries">
+            <summary>
+            Gets or sets the entries.
+            </summary>
+            <value>
+            The entries.
+            </value>
+        </member>
+        <member name="M:PhoneBook.Api.Repositories.PhoneBookContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            <para>
+            Override this method to configure the database (and other options) to be used for this context.
+            This method is called for each instance of the context that is created.
+            The base implementation does nothing.
+            </para>
+            <para>
+            In situations where an instance of <see cref="T:Microsoft.EntityFrameworkCore.DbContextOptions" /> may or may not have been passed
+            to the constructor, you can use <see cref="P:Microsoft.EntityFrameworkCore.DbContextOptionsBuilder.IsConfigured" /> to determine if
+            the options have already been set, and skip some or all of the logic in
+            <see cref="M:Microsoft.EntityFrameworkCore.DbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)" />.
+            </para>
+            </summary>
+            <param name="optionsBuilder">A builder used to create or modify options for this context. Databases (and other extensions)
+            typically define extension methods on this object that allow you to configure the context.</param>
+        </member>
+        <member name="T:PhoneBook.Api.Repositories.PhoneBookRepository">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:PhoneBook.Api.Repositories.Interfaces.IPhoneBookRepository" />
+        </member>
+        <member name="M:PhoneBook.Api.Repositories.PhoneBookRepository.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PhoneBook.Api.Repositories.PhoneBookRepository"/> class.
+            </summary>
+            <param name="config">The configuration.</param>
+        </member>
+        <member name="M:PhoneBook.Api.Repositories.PhoneBookRepository.SaveEntry(PhoneBook.Api.Domain.Models.Request.EntryRequest)">
+            <summary>
+            Saves the entry.
+            </summary>
+            <param name="request">The request.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PhoneBook.Api.Repositories.PhoneBookRepository.GetEntries(System.String)">
+            <summary>
+            Gets the entries.
+            </summary>
+            <param name="name">The name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PhoneBook.Api.Repositories.PhoneBookRepository.SearchEntries(System.String)">
+            <summary>
+            Searches the entries.
+            </summary>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="T:PhoneBook.Api.Services.Interfaces.IPhoneBookService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PhoneBook.Api.Services.Interfaces.IPhoneBookService.SaveEntry(System.String,PhoneBook.Api.Domain.Models.Request.EntryRequest)">
+            <summary>
+            Saves the entry.
+            </summary>
+            <param name="correlationId">Unique identifier of the message</param>
+            <param name="request">The request.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PhoneBook.Api.Services.Interfaces.IPhoneBookService.GetEntries(System.String,System.String)">
+            <summary>
+            Gets the entries.
+            </summary>
+            <param name="correlationId">Unique identifier of the message</param>
+            <param name="name">The name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PhoneBook.Api.Services.Interfaces.IPhoneBookService.SearchEntries(System.String,System.String)">
+            <summary>
+            Searches the entries.
+            </summary>
+            <param name="correlationId">Unique identifier of the message</param>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="T:PhoneBook.Api.Services.PhoneBookService">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:PhoneBook.Api.Services.Interfaces.IPhoneBookService" />
+        </member>
+        <member name="M:PhoneBook.Api.Services.PhoneBookService.#ctor(PhoneBook.Api.Repositories.Interfaces.IPhoneBookRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PhoneBook.Api.Services.PhoneBookService"/> class.
+            </summary>
+            <param name="phoneBookRepository">The PhoneBook repository.</param>
+        </member>
+        <member name="M:PhoneBook.Api.Services.PhoneBookService.SaveEntry(System.String,PhoneBook.Api.Domain.Models.Request.EntryRequest)">
+            <summary>
+            Saves the entry.
+            </summary>
+            <param name="correlationId">Unique identifier of the message</param>
+            <param name="request">The request.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PhoneBook.Api.Services.PhoneBookService.GetEntries(System.String,System.String)">
+            <summary>
+            Gets the entries.
+            </summary>
+            <param name="correlationId">Unique identifier of the message</param>
+            <param name="name">The name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PhoneBook.Api.Services.PhoneBookService.SearchEntries(System.String,System.String)">
+            <summary>
+            Searches the entries.
+            </summary>
+            <param name="correlationId">Unique identifier of the message</param>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="T:PhoneBook.Api.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PhoneBook.Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:PhoneBook.Api.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PhoneBook.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:PhoneBook.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="P:PhoneBook.Api.Startup.XmlCommentsFilePath">
+            <summary>
+            Set the comments path for the swagger json and ui
+            </summary>
+            <value>
+            The XML comments file path
+            </value>
+        </member>
+    </members>
+</doc>

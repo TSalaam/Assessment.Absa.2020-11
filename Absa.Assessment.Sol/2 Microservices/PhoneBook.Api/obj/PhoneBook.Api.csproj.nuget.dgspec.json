@@ -29,6 +29,111 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain.Models.Request\\PhoneBook.Api.Domain.Models.Request.csproj": {
+                "projectPath": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain.Models.Request\\PhoneBook.Api.Domain.Models.Request.csproj"
+              },
+              "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain.Models\\PhoneBook.Api.Domain.Models.csproj": {
+                "projectPath": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain.Models\\PhoneBook.Api.Domain.Models.csproj"
+              },
+              "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain\\PhoneBook.Api.Domain.csproj": {
+                "projectPath": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain\\PhoneBook.Api.Domain.csproj"
+              },
+              "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\4 Infrastructure\\Phonebook.Api.Infrastructure\\PhoneBook.Api.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\4 Infrastructure\\Phonebook.Api.Infrastructure\\PhoneBook.Api.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[9.3.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.PlatformAbstractions": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.OpenApi": {
+              "target": "Package",
+              "version": "[1.2.3, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.9.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain.Models.Request\\PhoneBook.Api.Domain.Models.Request.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain.Models.Request\\PhoneBook.Api.Domain.Models.Request.csproj",
+        "projectName": "PhoneBook.Api.Domain.Models.Request",
+        "projectPath": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain.Models.Request\\PhoneBook.Api.Domain.Models.Request.csproj",
+        "packagesPath": "C:\\Users\\Thaabiet.Salaam\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain.Models.Request\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Thaabiet.Salaam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
             "projectReferences": {}
           }
         },
@@ -51,9 +156,193 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain.Models\\PhoneBook.Api.Domain.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain.Models\\PhoneBook.Api.Domain.Models.csproj",
+        "projectName": "PhoneBook.Api.Domain.Models",
+        "projectPath": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain.Models\\PhoneBook.Api.Domain.Models.csproj",
+        "packagesPath": "C:\\Users\\Thaabiet.Salaam\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Thaabiet.Salaam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain\\PhoneBook.Api.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain\\PhoneBook.Api.Domain.csproj",
+        "projectName": "PhoneBook.Api.Domain",
+        "projectPath": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain\\PhoneBook.Api.Domain.csproj",
+        "packagesPath": "C:\\Users\\Thaabiet.Salaam\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\3 Domain\\Phonebook.Api.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Thaabiet.Salaam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\4 Infrastructure\\Phonebook.Api.Infrastructure\\PhoneBook.Api.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\4 Infrastructure\\Phonebook.Api.Infrastructure\\PhoneBook.Api.Infrastructure.csproj",
+        "projectName": "PhoneBook.Api.Infrastructure",
+        "projectPath": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\4 Infrastructure\\Phonebook.Api.Infrastructure\\PhoneBook.Api.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Thaabiet.Salaam\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Thaabiet.Salaam\\source\\repos\\TSalaam\\Assessment.Absa.2020-11\\Absa.Assessment.Sol\\4 Infrastructure\\Phonebook.Api.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Thaabiet.Salaam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[9.3.0, )"
             },
+            "Microsoft.AspNetCore.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
