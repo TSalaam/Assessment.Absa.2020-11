@@ -1,0 +1,8 @@
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\3 Domain\Phonebook.Api.Domain.Models.Response\bin\Debug\netcoreapp3.1\Phonebook.Api.Domain.Models.Response.deps.json
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\3 Domain\Phonebook.Api.Domain.Models.Response\bin\Debug\netcoreapp3.1\Phonebook.Api.Domain.Models.Response.dll
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\3 Domain\Phonebook.Api.Domain.Models.Response\bin\Debug\netcoreapp3.1\Phonebook.Api.Domain.Models.Response.pdb
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\3 Domain\Phonebook.Api.Domain.Models.Response\obj\Debug\netcoreapp3.1\Phonebook.Api.Domain.Models.Response.AssemblyInfoInputs.cache
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\3 Domain\Phonebook.Api.Domain.Models.Response\obj\Debug\netcoreapp3.1\Phonebook.Api.Domain.Models.Response.AssemblyInfo.cs
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\3 Domain\Phonebook.Api.Domain.Models.Response\obj\Debug\netcoreapp3.1\Phonebook.Api.Domain.Models.Response.csproj.CoreCompileInputs.cache
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\3 Domain\Phonebook.Api.Domain.Models.Response\obj\Debug\netcoreapp3.1\Phonebook.Api.Domain.Models.Response.dll
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\3 Domain\Phonebook.Api.Domain.Models.Response\obj\Debug\netcoreapp3.1\Phonebook.Api.Domain.Models.Response.pdb

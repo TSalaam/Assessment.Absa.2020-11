@@ -1,0 +1,9 @@
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\4 Infrastructure\Phonebook.Api.Infrastructure\bin\Debug\netcoreapp3.1\Phonebook.Api.Infrastructure.deps.json
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\4 Infrastructure\Phonebook.Api.Infrastructure\bin\Debug\netcoreapp3.1\Phonebook.Api.Infrastructure.dll
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\4 Infrastructure\Phonebook.Api.Infrastructure\bin\Debug\netcoreapp3.1\Phonebook.Api.Infrastructure.pdb
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\4 Infrastructure\Phonebook.Api.Infrastructure\obj\Debug\netcoreapp3.1\Phonebook.Api.Infrastructure.csprojAssemblyReference.cache
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\4 Infrastructure\Phonebook.Api.Infrastructure\obj\Debug\netcoreapp3.1\Phonebook.Api.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\4 Infrastructure\Phonebook.Api.Infrastructure\obj\Debug\netcoreapp3.1\Phonebook.Api.Infrastructure.AssemblyInfo.cs
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\4 Infrastructure\Phonebook.Api.Infrastructure\obj\Debug\netcoreapp3.1\Phonebook.Api.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\4 Infrastructure\Phonebook.Api.Infrastructure\obj\Debug\netcoreapp3.1\Phonebook.Api.Infrastructure.dll
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\4 Infrastructure\Phonebook.Api.Infrastructure\obj\Debug\netcoreapp3.1\Phonebook.Api.Infrastructure.pdb
