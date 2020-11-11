@@ -82,6 +82,13 @@ C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Asses
 C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\2 Microservices\PhoneBook.Api\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\2 Microservices\PhoneBook.Api\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\2 Microservices\PhoneBook.Api\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\2 Microservices\PhoneBook.Api\bin\Debug\netcoreapp3.1\nlog.config
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\2 Microservices\PhoneBook.Api\bin\Debug\netcoreapp3.1\nlog.database.config
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\2 Microservices\PhoneBook.Api\bin\Debug\netcoreapp3.1\nlog.elasticsearch.config
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\2 Microservices\PhoneBook.Api\bin\Debug\netcoreapp3.1\nlog.file.config
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\2 Microservices\PhoneBook.Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\2 Microservices\PhoneBook.Api\bin\Debug\netcoreapp3.1\Humanizer.dll
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\2 Microservices\PhoneBook.Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\2 Microservices\PhoneBook.Api\obj\Debug\netcoreapp3.1\PhoneBook.Api.csproj.CoreCompileInputs.cache
 C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\2 Microservices\PhoneBook.Api\obj\Debug\netcoreapp3.1\PhoneBook.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\2 Microservices\PhoneBook.Api\obj\Debug\netcoreapp3.1\PhoneBook.Api.MvcApplicationPartsAssemblyInfo.cache

@@ -21,14 +21,20 @@ namespace PhoneBook.Api.Repositories.Helpers {
 
                 serviceProvider.GetRequiredService<DbContextOptions<PhoneBookContext>>())) {
 
-                if (context.PhoneBooks.Any()) {
-                    return;   // Database has been seeded
-                }
+                //if (context.PhoneBooks.Any()) {
+                //    return;   // Database has been seeded
+                //}
 
                 context.PhoneBooks.AddRange(
                      new Domain.Models.PhoneBook {
                          Name = "Default user",
                          Entries = null
+                     }
+                );
+                context.Entries.AddRange(
+                     new Domain.Models.Entry {
+                         Name = "Default user",
+                         PhoneNumber = string.Empty
                      }
                 );
 

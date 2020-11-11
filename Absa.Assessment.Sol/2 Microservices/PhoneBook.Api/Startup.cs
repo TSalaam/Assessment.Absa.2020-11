@@ -5,15 +5,26 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
+using FluentValidation.AspNetCore;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.EntityFrameworkCore;
 
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.PlatformAbstractions;
+
+using PhoneBook.Api.Configuration;
+using PhoneBook.Api.Repositories;
+using PhoneBook.Api.Repositories.Interfaces;
+using PhoneBook.Api.Services;
+using PhoneBook.Api.Services.Interfaces;
+using PhoneBook.Api.Validators;
 
 namespace PhoneBook.Api {
 
@@ -41,7 +52,15 @@ namespace PhoneBook.Api {
         /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services) {
 
-            services.AddControllers();
+            services.Configure<AppSettings>(Configuration);
+
+            services.AddControllers()
+                .AddFluentValidation(fv => { 
+                    fv.RegisterValidatorsFromAssemblyContaining<EntryRequestValidator>(); 
+                });
+
+            services.AddScoped<IPhoneBookService, PhoneBookService>();
+            services.AddScoped<IPhoneBookRepository, PhoneBookRepository>();
 
             services.AddSwaggerGen(options =>
             {
@@ -50,6 +69,12 @@ namespace PhoneBook.Api {
                     Version = "v1",
                     Description = "Sample service for PhoneBook API",
                 });
+            });
+
+            var connection = $"Data Source=PhoneBookDb.db";
+
+            services.AddDbContext<PhoneBookContext>(options => {
+                options.UseSqlite(connection);
             });
         }
 

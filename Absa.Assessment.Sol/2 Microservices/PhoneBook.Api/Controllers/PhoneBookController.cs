@@ -6,8 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
+using FluentValidation.AspNetCore;
+
 using PhoneBook.Api.Domain.Models.Request;
 using PhoneBook.Api.Infrastructure.Exceptions;
+using PhoneBook.Api.Infrastructure.Extensions;
 using PhoneBook.Api.Infrastructure.Results;
 using PhoneBook.Api.Services.Interfaces;
 
@@ -48,11 +51,7 @@ namespace PhoneBook.Api.Controllers {
         /// <exception cref="ApiArgumentException">Parameter cannot be null or empty - Name</exception>
         [HttpPost]
         [Route("entries/save")]
-        public IActionResult SaveEntry([FromBody] EntryRequest entry) {
-
-            if (string.IsNullOrEmpty(entry.Name)) {
-                throw new ApiArgumentException("Parameter cannot be null or empty", nameof(EntryRequest.Name));
-            }
+        public IActionResult SaveEntry([CustomizeValidator(RuleSet = "default")][FromBody] EntryRequest entry) {
 
             string correlationId = Guid.NewGuid().ToString();
 
@@ -65,9 +64,9 @@ namespace PhoneBook.Api.Controllers {
 
                 _logger.LogError(new EventId((int)Log.EventId.SubmissionFailed), ex, Log.Template,
                     Log.CheckPoint.Standard.ToString(), ToString(), correlationId, (int)Log.EventId.SubmissionFailed, Log.EventId.SubmissionFailed.ToString(),
-                    ToString(), correlationId, Log.Status.FAILED.ToString(), ex.Message);
+                    ToString(), correlationId, Log.Status.FAILED.ToString(), ex.InnermostException().Message);
 
-                return new SubmissionFailedResult(Log.EventId.SubmissionFailed.ToString(), ex.Message, ToString(), exception: ex);
+                return new SubmissionFailedResult(Log.EventId.SubmissionFailed.ToString(), ex.InnermostException().Message, ToString(), exception: ex);
             }            
         }
 

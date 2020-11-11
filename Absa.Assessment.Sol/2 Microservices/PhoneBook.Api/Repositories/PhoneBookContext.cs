@@ -50,11 +50,12 @@ namespace PhoneBook.Api.Repositories {
         /// <see cref="M:Microsoft.EntityFrameworkCore.DbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)" />.
         /// </para>
         /// </summary>
-        /// <param name="optionsBuilder">A builder used to create or modify options for this context. Databases (and other extensions)
+        /// <param name="options">A builder used to create or modify options for this context. Databases (and other extensions)
         /// typically define extension methods on this object that allow you to configure the context.</param>
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
+        protected override void OnConfiguring(DbContextOptionsBuilder options) {
 
-            if (!optionsBuilder.IsConfigured) {
+            if (!options.IsConfigured) {
+
                 IConfigurationRoot configuration = new ConfigurationBuilder()
                    .SetBasePath(Directory.GetCurrentDirectory())
                    .AddJsonFile("appsettings.json")
@@ -62,7 +63,7 @@ namespace PhoneBook.Api.Repositories {
 
                 var connectionString = configuration.GetConnectionString("DefaultConnection");
 
-                optionsBuilder.UseSqlite(connectionString);
+                options.UseSqlite(connectionString);
             }
         }
     }
