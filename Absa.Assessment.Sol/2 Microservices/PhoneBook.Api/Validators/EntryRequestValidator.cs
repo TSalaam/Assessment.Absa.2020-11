@@ -13,7 +13,7 @@ namespace PhoneBook.Api.Validators {
 
             RuleFor(x => x.Name).NotEmpty().MaximumLength(50);
 
-            RuleFor(x => x.PhoneNumber).NotEmpty().MaximumLength(10);
+            RuleFor(x => x.PhoneNumber).NotEmpty().MinimumLength(10).MaximumLength(10);
         }
     }
 }

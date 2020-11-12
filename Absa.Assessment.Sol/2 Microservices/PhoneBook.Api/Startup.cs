@@ -26,6 +26,8 @@ using PhoneBook.Api.Services;
 using PhoneBook.Api.Services.Interfaces;
 using PhoneBook.Api.Validators;
 
+using PhoneBook.Api.Infrastructure.Filters;
+
 namespace PhoneBook.Api {
 
     /// <summary>
@@ -54,10 +56,13 @@ namespace PhoneBook.Api {
 
             services.Configure<AppSettings>(Configuration);
 
-            services.AddControllers()
+            services
+                .AddControllers(options => {
+                    options.Filters.Add(typeof(ValidateFilterAttribute));
+                })
                 .AddFluentValidation(fv => { 
                     fv.RegisterValidatorsFromAssemblyContaining<EntryRequestValidator>(); 
-                });
+                });            
 
             services.AddScoped<IPhoneBookService, PhoneBookService>();
             services.AddScoped<IPhoneBookRepository, PhoneBookRepository>();
