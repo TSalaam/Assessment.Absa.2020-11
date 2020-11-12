@@ -1,0 +1,265 @@
+﻿
+@{
+    ViewData["Title"] = "PhoneBook";
+}
+
+<h2>PhoneBook</h2>
+
+<div class="row">
+    <div class="col-xs-6">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search by name&hellip;" id="inputName">
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" id="btnFind">Search</button>
+            </span>
+        </div>
+    </div>
+    <div class="col-xs-1">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAddEntry">
+            Add New Entry
+        </button>
+    </div>
+</div>
+
+<hr />
+
+<div class="row">
+    <div class="col-xs-6">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Filter by number&hellip;" id="inputFilter">
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" id="btnFilter">Search</button>
+            </span>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-6">
+        <table id="tablePhonebook" style="font-size:small" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Phone Numbers</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalAddEntry" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Add New Entry</h4>
+            </div>
+            <div class="modal-body">
+                <input type="tel" class="form-control" id="inputPhoneNumber" placeholder="Phone Number">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="btnSave">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sweet Alert Styles -->
+<link href="~/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css" />
+<link href="~/plugins/sweetalert/google/google.css" rel="stylesheet" type="text/css">
+
+<script src="~/plugins/sweetalert/sweetalert.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+<script>
+
+    var datatable = null;
+
+    $(document).ready(function () {
+
+        $('#inputName').val("");
+        $('#inputPhoneNumber').val("");
+
+        $('#btnFind').click(function () {
+            if ($('#inputName').val() == '') {
+                ShowSwalError('Please enter a valid phonebook name');
+            }
+            else {
+                GetList();
+            }
+        });
+
+        $('#btnSave').click(function () {
+            if ($('#inputName').val() == '') {
+                ShowSwalError('Please enter a valid phonebook name');
+            }
+            else if ($('#inputPhoneNumber').val() == '') {
+                ShowSwalError('Please enter a valid phone number');
+            }
+            else {
+                SaveEntry();
+            }
+        });
+
+        $('#btnFilter').click(function () {
+            if ($('#inputName').val() == '') {
+                ShowSwalError('Please enter a valid phonebook name');
+            }
+            else if ($('#inputFilter').val() == '') {
+                ShowSwalError('Please enter a query');
+            }
+            else {
+                SearchEntries();
+            }
+        });
+
+        $('#modalAddEntry').on('hidden.bs.modal', function (e) {
+
+            $('#inputPhoneNumber').val("");
+
+            GetList();
+        })
+    });
+
+    function GetList() {
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("PhoneBookData", "Home")',
+            data: { phonebookName: $('#inputName').val() },
+            success: function (response) {
+
+                var status = response.result.status;
+
+                console.log(status);
+
+                if (status.search(/error/i) == -1 && status.search(/no data/i) == -1) {
+
+                    $("#tablePhonebook tbody").empty();
+
+                    $.each(response.result.result, function (index, value) {
+
+                        var markup = "<tr><td>" + value.phoneNumber + "</td></tr>";
+
+                        $("table tbody").append(markup);
+                    });
+                }
+                else {
+                    ShowSwalWarning(response.result.message);
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                ShowSwalError('There was an error: ' + errorThrown);
+            }
+        });
+    }
+
+    function SaveEntry() {
+
+        var request = new Object();
+
+        request.Name = $('#inputName').val();
+        request.PhoneNumber = $('#inputPhoneNumber').val();
+
+        var parameters = JSON.stringify({
+            request: request
+        });
+
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("SaveEntry", "Home")',
+            data: { name: $('#inputName').val(), phoneNumber: $('#inputPhoneNumber').val() },
+            success: function (response) {
+
+                var status = response.result.status;
+
+                if (status.search(/error/i) == -1 && status.search(/failed/i) == -1) {
+
+                    $('#inputPhoneNumber').val
+
+                    $('#modalAddEntry').modal('hide');
+
+                    GetList();
+                }
+                else {
+                    ShowSwalWarning(response.result.message);
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                ShowSwalError('There was an error: ' + errorThrown);
+            }
+        });
+    }
+
+    function SearchEntries() {
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("SearchPhonebookEntries", "Home")',
+            data: { query: $('#inputFilter').val() },
+            success: function (response) {
+
+                var status = response.result.status;
+
+                console.log(status);
+
+                if (status.search(/error/i) == -1 && status.search(/no data/i) == -1) {
+
+                    $("#tablePhonebook tbody").empty();
+
+                    $.each(response.result.result, function (index, value) {
+
+                        var markup = "<tr><td>" + value.phoneNumber + "</td></tr>";
+
+                        $("table tbody").append(markup);
+                    });
+                }
+                else {
+                    ShowSwalWarning(response.result.message);
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                ShowSwalError('There was an error: ' + errorThrown);
+            }
+        });
+    }
+
+    /**
+     * GENERIC FUNCTIONS
+     */
+
+    function ShowSwal(text) {
+        swal({
+            title: 'Result...',
+            text: text,
+            type: 'success',
+            confirmButtonText: 'OK',
+            confirmButtonColor: '#D42E12'
+        });
+    }
+    function ShowSwalError(text) {
+        swal({
+            title: 'Sorry...',
+            text: text,
+            type: 'error',
+            confirmButtonText: 'OK',
+            confirmButtonColor: '#D42E12'
+        });
+    }
+
+    function ShowSwalWarning(text) {
+        swal({
+            title: 'Sorry...',
+            text: text,
+            type: 'warning',
+            confirmButtonText: 'OK',
+            confirmButtonColor: '#D42E12'
+        });
+    }
+
+</script>
