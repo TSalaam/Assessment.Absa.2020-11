@@ -4,19 +4,16 @@ using System.Net.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 
 using Polly.Extensions.Http;
 using Polly;
 
-using Newtonsoft.Json.Serialization;
-
 using PhoneBook.Web.Configuration;
 using PhoneBook.Web.Clients;
+using PhoneBook.Web.Clients.Interfaces;
 
 using PhoneBook.Api.Infrastructure.Filters;
-using PhoneBook.Web.Clients.Interfaces;
 
 namespace PhoneBook.Web.Extensions.Policies {
 
@@ -53,18 +50,10 @@ namespace PhoneBook.Web.Extensions.Policies {
             services.Configure<AppSettings>(configuration);
 
             services.AddMvc(options => {
-
-                //options.Filters.Add(new AddHeader("Author", "Thaabiet Salaam"));
-
                 options.Filters.Add(typeof(HttpGlobalExceptionFilter));
             })
-                //.SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
                 .AddJsonOptions(options => {
-
-                    //options.SerializerSettings.ContractResolver = new DefaultContractResolver();
-
-                    //options.SerializerSettings.DateFormatHandling = Newtonsoft.Json.DateFormatHandling.IsoDateFormat;
-                    //options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
+                    
                 });
 
             services.AddMvcCore(options => {
@@ -80,9 +69,8 @@ namespace PhoneBook.Web.Extensions.Policies {
         /// Adds all Http client services (like Service-Agents) using resilient Http requests based on HttpClient factory and Polly's policies 
         /// </summary>
         /// <param name="services">The services.</param>
-        /// <param name="configuration">The configuration.</param>
         /// <returns></returns>
-        public static IServiceCollection AddHttpClientServices(this IServiceCollection services, IConfiguration configuration) {
+        public static IServiceCollection AddHttpClientServices(this IServiceCollection services) {
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
