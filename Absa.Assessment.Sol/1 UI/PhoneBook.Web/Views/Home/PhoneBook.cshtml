@@ -10,7 +10,7 @@
         <div class="input-group">
             <input type="text" class="form-control" placeholder="Search by name&hellip;" id="inputName">
             <span class="input-group-btn">
-                <button type="button" class="btn btn-default" id="btnFind">Search</button>
+                <button type="button" class="btn btn-secondary" id="btnFind">Search</button>
             </span>
         </div>
     </div>
@@ -28,7 +28,7 @@
         <div class="input-group">
             <input type="text" class="form-control" placeholder="Filter by number&hellip;" id="inputFilter">
             <span class="input-group-btn">
-                <button type="button" class="btn btn-default" id="btnFilter">Search</button>
+                <button type="button" class="btn btn-secondary" id="btnFilter">Search</button>
             </span>
         </div>
     </div>
@@ -61,11 +61,14 @@
                 <input type="tel" class="form-control" id="inputPhoneNumber" placeholder="Phone Number">
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                 <button type="button" class="btn btn-primary" id="btnSave">Save</button>
             </div>
         </div>
     </div>
+</div>
+<div id="domMessage" style="display:none;">
+    <h1>We are processing your request.  Please be patient.</h1>
 </div>
 
 <!-- Sweet Alert Styles -->
@@ -88,8 +91,11 @@
         $('#inputPhoneNumber').val("");
 
         $('#btnFind').click(function () {
+
+            $.blockUI(); 
+
             if ($('#inputName').val() == '') {
-                ShowSwalError('Please enter a valid phonebook name');
+                ShowSwalError('Please enter a valid phone number');
             }
             else {
                 GetList();
@@ -97,6 +103,9 @@
         });
 
         $('#btnSave').click(function () {
+
+            $.blockUI(); 
+
             if ($('#inputName').val() == '') {
                 ShowSwalError('Please enter a valid phonebook name');
             }
@@ -109,6 +118,9 @@
         });
 
         $('#btnFilter').click(function () {
+
+            $.blockUI(); 
+
             if ($('#inputName').val() == '') {
                 ShowSwalError('Please enter a valid phonebook name');
             }
@@ -127,38 +139,6 @@
             GetList();
         })
     });
-
-    function GetList() {
-        $.ajax({
-            type: "GET",
-            url: '@Url.Action("PhoneBookData", "Home")',
-            data: { phonebookName: $('#inputName').val() },
-            success: function (response) {
-
-                var status = response.result.status;
-
-                console.log(status);
-
-                if (status.search(/error/i) == -1 && status.search(/no data/i) == -1) {
-
-                    $("#tablePhonebook tbody").empty();
-
-                    $.each(response.result.result, function (index, value) {
-
-                        var markup = "<tr><td>" + value.phoneNumber + "</td></tr>";
-
-                        $("table tbody").append(markup);
-                    });
-                }
-                else {
-                    ShowSwalWarning(response.result.message);
-                }
-            },
-            error: function (XMLHttpRequest, textStatus, errorThrown) {
-                ShowSwalError('There was an error: ' + errorThrown);
-            }
-        });
-    }
 
     function SaveEntry() {
 
@@ -193,6 +173,45 @@
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) {
                 ShowSwalError('There was an error: ' + errorThrown);
+            },
+            complete: function () {
+                $.unblockUI();
+            }
+        });
+    }
+
+    function GetList() {
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("PhoneBookData", "Home")',
+            data: { phonebookName: $('#inputName').val() },
+            success: function (response) {
+
+                var status = response.result.status;
+
+                console.log(status);
+
+                if (status.search(/error/i) == -1 && status.search(/no data/i) == -1) {
+
+                    $("#tablePhonebook tbody").empty();
+
+                    $.each(response.result.result, function (index, value) {
+
+                        var markup = "<tr><td>" + value.phoneNumber + "</td></tr>";
+
+                        $("table tbody").append(markup);
+                    });
+                }
+                else {
+                    ShowSwalWarning(response.result.message);
+                }
+                $.unblockUI();
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                ShowSwalError('There was an error: ' + errorThrown);
+            },
+            complete: function () {
+                $.unblockUI();
             }
         });
     }
@@ -225,6 +244,9 @@
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) {
                 ShowSwalError('There was an error: ' + errorThrown);
+            },
+            complete: function () {
+                $.unblockUI();
             }
         });
     }
@@ -239,7 +261,8 @@
             text: text,
             type: 'success',
             confirmButtonText: 'OK',
-            confirmButtonColor: '#D42E12'
+            confirmButtonColor: '#D42E12',
+            onClose: $.unblockUI()
         });
     }
     function ShowSwalError(text) {
@@ -248,7 +271,8 @@
             text: text,
             type: 'error',
             confirmButtonText: 'OK',
-            confirmButtonColor: '#D42E12'
+            confirmButtonColor: '#D42E12',
+            onClose: $.unblockUI()
         });
     }
 
@@ -258,7 +282,8 @@
             text: text,
             type: 'warning',
             confirmButtonText: 'OK',
-            confirmButtonColor: '#D42E12'
+            confirmButtonColor: '#D42E12',
+            onClose: $.unblockUI()
         });
     }
 
