@@ -27,6 +27,7 @@ using PhoneBook.Api.Services.Interfaces;
 using PhoneBook.Api.Validators;
 
 using PhoneBook.Api.Infrastructure.Filters;
+using NLog;
 
 namespace PhoneBook.Api {
 
@@ -56,8 +57,15 @@ namespace PhoneBook.Api {
 
             services.Configure<AppSettings>(Configuration);
 
+            var perfMonEnabled = Configuration.GetSection("Settings").GetValue<bool>("PerfMonEnabled");
+
             services
                 .AddControllers(options => {
+
+                    if (perfMonEnabled) {
+                        options.Filters.Add(typeof(ActionLogFilter));
+                    }
+
                     options.Filters.Add(typeof(ValidateFilterAttribute));
                 })
                 .AddFluentValidation(fv => { 
@@ -93,6 +101,12 @@ namespace PhoneBook.Api {
             if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
             }
+
+            var applicationName = Configuration.GetSection("Settings").GetValue<string>("AppName");
+            var loggingDirectory = Configuration.GetSection("Settings").GetValue<string>("LoggingDirectory");
+
+            LogManager.Configuration.Variables["appName"] = applicationName;
+            LogManager.Configuration.Variables["configDir"] = loggingDirectory;
 
             app.UseRouting();
 

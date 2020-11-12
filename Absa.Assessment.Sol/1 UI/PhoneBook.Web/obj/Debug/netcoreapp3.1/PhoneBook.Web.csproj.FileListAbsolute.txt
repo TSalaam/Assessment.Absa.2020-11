@@ -81,3 +81,7 @@ C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Asses
 C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\1 UI\PhoneBook.Web\obj\Debug\netcoreapp3.1\PhoneBook.Web.csproj.CoreCompileInputs.cache
 C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\1 UI\PhoneBook.Web\obj\Debug\netcoreapp3.1\PhoneBook.Web.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\1 UI\PhoneBook.Web\obj\Debug\netcoreapp3.1\PhoneBook.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\1 UI\PhoneBook.Web\bin\Debug\netcoreapp3.1\nlog.config
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\1 UI\PhoneBook.Web\bin\Debug\netcoreapp3.1\nlog.database.config
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\1 UI\PhoneBook.Web\bin\Debug\netcoreapp3.1\nlog.elasticsearch.config
+C:\Users\Thaabiet.Salaam\source\repos\TSalaam\Assessment.Absa.2020-11\Absa.Assessment.Sol\1 UI\PhoneBook.Web\bin\Debug\netcoreapp3.1\nlog.file.config

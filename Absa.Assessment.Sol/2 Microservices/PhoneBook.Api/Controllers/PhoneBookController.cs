@@ -28,7 +28,7 @@ namespace PhoneBook.Api.Controllers {
     public class PhoneBookController : ControllerBase {
 
         private readonly IConfiguration _configuration;
-        private readonly ILogger _logger;
+        private readonly ILogger<PhoneBookController> _logger;
 
         private readonly IPhoneBookService _phoneBookService;
 

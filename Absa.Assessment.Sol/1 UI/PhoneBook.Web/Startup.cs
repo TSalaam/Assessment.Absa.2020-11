@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NLog;
 using PhoneBook.Web.Extensions.Policies;
 
 namespace PhoneBook.Web {
@@ -31,7 +32,7 @@ namespace PhoneBook.Web {
 
             services
                 .AddCustomMvc(Configuration)
-                .AddHttpClientServices(Configuration)
+                .AddHttpClientServices()
                 .AddPollyPolicies();
         }
 
@@ -44,6 +45,13 @@ namespace PhoneBook.Web {
             else {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            var applicationName = Configuration.GetSection("Settings").GetValue<string>("AppName");
+            var loggingDirectory = Configuration.GetSection("Settings").GetValue<string>("LoggingDirectory");
+
+            LogManager.Configuration.Variables["appName"] = applicationName;
+            LogManager.Configuration.Variables["configDir"] = loggingDirectory;
+
             app.UseStaticFiles();
 
             app.UseRouting();
