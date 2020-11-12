@@ -2,21 +2,16 @@
 using System.Runtime.Serialization.Json;
 using System.Threading.Tasks;
 
-using Microsoft.AspNetCore.Mvc;
-
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
 using Newtonsoft.Json;
 
 using PhoneBook.Api.Domain.Models.Request;
-using PhoneBook.Api.Infrastructure.Results;
 
 using PhoneBook.Web.Configuration;
 using PhoneBook.Web.Clients.Helpers;
 using PhoneBook.Web.Clients.Interfaces;
-
-using Log = PhoneBook.Api.Domain.Logging.LoggingConstants;
 using PhoneBook.Web.Models;
 
 namespace PhoneBook.Web.Clients {

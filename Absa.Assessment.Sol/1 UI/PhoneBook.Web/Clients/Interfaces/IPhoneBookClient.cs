@@ -1,8 +1,7 @@
 ﻿using System.Threading.Tasks;
 
-using Microsoft.AspNetCore.Mvc;
-
 using PhoneBook.Api.Domain.Models.Request;
+
 using PhoneBook.Web.Models;
 
 namespace PhoneBook.Web.Clients.Interfaces {
