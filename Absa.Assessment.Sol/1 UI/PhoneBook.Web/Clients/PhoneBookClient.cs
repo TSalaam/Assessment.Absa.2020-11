@@ -46,21 +46,25 @@ namespace PhoneBook.Web.Clients {
         /// <param name="apiVersion">The API version.</param>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public async Task<string> SaveEntry(string apiVersion, EntryRequest request) {
+        public async Task<DefaultResponse> SaveEntry(string apiVersion, EntryRequest request) {
 
             var uri = Infrastructure.UrlsConfig.PhoneBook.SaveEntry(_phonebookSvcBaseUrl).Replace("api", $"api/{apiVersion}");
 
             var responseMessage = await _apiClient.PostAsync(uri, ApiHelper.CreateHttpContent(request));
 
             if (!responseMessage.IsSuccessStatusCode) {
-                return "Unable to connect to PhoneBook Service";
+                return new DefaultResponse {
+                    source = ToString(),
+                    status = "ERROR",
+                    message = "Unable to connect to PhoneBook Service"
+                };
             }
 
             var streamTask = responseMessage.Content.ReadAsStreamAsync();
 
-            var serializer = new DataContractJsonSerializer(typeof(string));
+            var serializer = new DataContractJsonSerializer(typeof(DefaultResponse));
 
-            var response = serializer.ReadObject(await streamTask) as string;
+            var response = serializer.ReadObject(await streamTask) as DefaultResponse;
 
             return response;
         }

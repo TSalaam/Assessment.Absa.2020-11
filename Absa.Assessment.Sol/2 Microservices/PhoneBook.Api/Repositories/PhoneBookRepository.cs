@@ -62,8 +62,8 @@ namespace PhoneBook.Api.Repositories {
             using (var db = new PhoneBookContext(optionsBuilder.Options)) {
 
                 var entries = db.Entries
-                    .Where(b => b.Name == name)
-                    .OrderBy(b => b.PhoneNumber)
+                    .Where(b => b.Name.Contains(name))
+                    .OrderBy(b => b.Name)
                     .ToList();
 
                 return entries;
@@ -83,7 +83,7 @@ namespace PhoneBook.Api.Repositories {
 
                 var entries = db.Entries
                     .Where(b => b.PhoneNumber.Contains(query))
-                    .OrderBy(b => b.PhoneNumber)
+                    .OrderBy(b => b.Name)
                     .ToList();
 
                 return entries;

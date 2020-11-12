@@ -13,7 +13,7 @@ namespace PhoneBook.Web.Clients.Interfaces {
         /// </summary>
         /// <param name="entry">The entry.</param>
         /// <returns></returns>
-        Task<string> SaveEntry(string apiVersion, EntryRequest request);
+        Task<DefaultResponse> SaveEntry(string apiVersion, EntryRequest request);
 
         /// <summary>
         /// Gets the entries.

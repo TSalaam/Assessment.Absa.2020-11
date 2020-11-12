@@ -84,10 +84,10 @@ namespace PhoneBook.Web.Controllers {
 
                 var result = _phoneBookClient.SaveEntry(ApiVersion_Major, request).Result;
 
-                string message = "Error";
+                string message = "ERROR";
 
-                //if (result.Status == "SUCCESS")
-                //    message = "Ok";
+                if (result.status == "SUCCESS")
+                    message = "Ok";
 
                 return new OkObjectResult(new {
                     Message = message,

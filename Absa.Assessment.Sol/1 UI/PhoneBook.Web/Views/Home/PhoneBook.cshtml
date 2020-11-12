@@ -8,7 +8,7 @@
 <div class="row">
     <div class="col-xs-6">
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search by name&hellip;" id="inputName">
+            <input type="text" class="form-control" placeholder="Search by name&hellip;" id="inputNameSearch">
             <span class="input-group-btn">
                 <button type="button" class="btn btn-secondary" id="btnFind">Search</button>
             </span>
@@ -38,10 +38,11 @@
 
 <div class="row">
     <div class="col-md-6">
-        <table id="tablePhonebook" style="font-size:small" class="table table-bordered table-striped">
+        <table id="tablePhonebook" style="font-size:medium" class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>Phone Numbers</th>
+                    <th>Name</th>
+                    <th>Phone Number</th>
                 </tr>
             </thead>
             <tbody></tbody>
@@ -57,8 +58,20 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Add New Entry</h4>
             </div>
-            <div class="modal-body">
-                <input type="tel" class="form-control" id="inputPhoneNumber" placeholder="Phone Number">
+            <div class="modal-body">                
+
+                <form>
+                    <div class="form-group">
+                        <label for="inputName" class="col-form-label">Name:</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Name">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPhoneNumber" class="col-form-label">Phone Number:</label>
+                        <input type="tel" class="form-control" id="inputPhoneNumber" placeholder="Phone Number">
+                    </div>
+                </form>
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -87,18 +100,19 @@
 
     $(document).ready(function () {
 
-        $('#inputName').val("");
+        $('#inputNameSearch').val("");
         $('#inputPhoneNumber').val("");
+        $('#inputName').val("");
 
         $('#btnFind').click(function () {
 
             $.blockUI(); 
 
-            if ($('#inputName').val() == '') {
-                ShowSwalError('Please enter a valid phone number');
+            if ($('#inputNameSearch').val() == '') {
+                ShowSwalError('Please enter a valid name');
             }
             else {
-                GetList();
+                SearchEntriesByName();
             }
         });
 
@@ -107,7 +121,7 @@
             $.blockUI(); 
 
             if ($('#inputName').val() == '') {
-                ShowSwalError('Please enter a valid phonebook name');
+                ShowSwalError('Please enter a valid name');
             }
             else if ($('#inputPhoneNumber').val() == '') {
                 ShowSwalError('Please enter a valid phone number');
@@ -121,14 +135,11 @@
 
             $.blockUI(); 
 
-            if ($('#inputName').val() == '') {
-                ShowSwalError('Please enter a valid phonebook name');
-            }
-            else if ($('#inputFilter').val() == '') {
-                ShowSwalError('Please enter a query');
+            if ($('#inputFilter').val() == '') {
+                ShowSwalError('Please enter a number to query');
             }
             else {
-                SearchEntries();
+                SearchEntriesByNumber();
             }
         });
 
@@ -136,7 +147,7 @@
 
             $('#inputPhoneNumber').val("");
 
-            GetList();
+            SearchEntriesByName();
         })
     });
 
@@ -161,11 +172,14 @@
 
                 if (status.search(/error/i) == -1 && status.search(/failed/i) == -1) {
 
-                    $('#inputPhoneNumber').val
+                    $('#inputNameSearch').val($('#inputName').val());
+
+                    $('#inputName').val('');
+                    $('#inputPhoneNumber').val('');
 
                     $('#modalAddEntry').modal('hide');
 
-                    GetList();
+                    SearchEntriesByName();
                 }
                 else {
                     ShowSwalWarning(response.result.message);
@@ -180,11 +194,11 @@
         });
     }
 
-    function GetList() {
+    function SearchEntriesByName() {
         $.ajax({
             type: "GET",
             url: '@Url.Action("PhoneBookData", "Home")',
-            data: { phonebookName: $('#inputName').val() },
+            data: { phonebookName: $('#inputNameSearch').val() },
             success: function (response) {
 
                 var status = response.result.status;
@@ -197,7 +211,7 @@
 
                     $.each(response.result.result, function (index, value) {
 
-                        var markup = "<tr><td>" + value.phoneNumber + "</td></tr>";
+                        var markup = "<tr><td>" + value.name + "</td><td>" + value.phoneNumber + "</td></tr>";
 
                         $("table tbody").append(markup);
                     });
@@ -216,7 +230,7 @@
         });
     }
 
-    function SearchEntries() {
+    function SearchEntriesByNumber() {
         $.ajax({
             type: "GET",
             url: '@Url.Action("SearchPhonebookEntries", "Home")',
@@ -233,7 +247,7 @@
 
                     $.each(response.result.result, function (index, value) {
 
-                        var markup = "<tr><td>" + value.phoneNumber + "</td></tr>";
+                        var markup = "<tr><td>" + value.name + "</td><td>" + value.phoneNumber + "</td></tr>";
 
                         $("table tbody").append(markup);
                     });
