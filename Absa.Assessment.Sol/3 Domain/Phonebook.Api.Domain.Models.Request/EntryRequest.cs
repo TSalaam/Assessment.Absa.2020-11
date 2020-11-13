@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace PhoneBook.Api.Domain.Models.Request {
 
     public class EntryRequest {

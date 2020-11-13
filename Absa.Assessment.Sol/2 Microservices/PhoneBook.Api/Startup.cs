@@ -1,22 +1,17 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 
 using FluentValidation.AspNetCore;
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 
 using Microsoft.EntityFrameworkCore;
 
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.PlatformAbstractions;
 
 using PhoneBook.Api.Configuration;
@@ -27,6 +22,7 @@ using PhoneBook.Api.Services.Interfaces;
 using PhoneBook.Api.Validators;
 
 using PhoneBook.Api.Infrastructure.Filters;
+
 using NLog;
 
 namespace PhoneBook.Api {

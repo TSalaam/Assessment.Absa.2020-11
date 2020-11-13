@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook.Api.Infrastructur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneBook.Api.Domain.Models.Response", "3 Domain\Phonebook.Api.Domain.Models.Response\PhoneBook.Api.Domain.Models.Response.csproj", "{1B753B51-08D1-4A00-9318-6D315D11589A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 Tests", "5 Tests", "{95DDA805-F49B-4B27-B271-F878429CC0AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
